@@ -1,0 +1,98 @@
+html, body, ul, ol, p, h1, h2, h3, h4, h5, h6
+    margin: 0
+    padding: 0
+
+h1, h2, h3, h4, h5, h6
+  font-size: inherit
+  font-weight: normal
+
+ul, li, ol
+    list-style: none
+
+a
+    text-decoration: none
+    color: #444
+    &:focus
+        text-decoration: none
+
+body,
+html
+  height: 100%
+  width: 100%
+
+html body
+  margin: 0 auto
+
+.clear
+    zoom: 1
+    &:after
+        content: ''
+        display: block
+        height: 0
+        width: 0
+        clear: both
+        visibility: visible
+        overflow: hidden
+
+.pull-right
+    float: right
+
+.pull-left
+    float: left
+
+.fade-in
+
+    &-enter-active,
+    &-leave-active
+        transition: all .3s cubic-bezier(.55, 0, .1, 1)
+
+    &-enter,
+    &-leave-active
+        opacity: 0
+
+.fade-linear
+
+    &-enter-active,
+    &-leave-active
+        transition: opacity .2s linear
+
+    &-enter,
+    &-leave-active
+        opacity: 0
+
+#bj,
+#bj-time
+  height: 100%
+  width: 100%
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: -1
+  background-color: rgba(0, 0, 0, 0.4)
+
+.tipsall,
+.tipsnew
+    position: absolute
+    color: #fe9156
+    background-color: #fff4ee
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    text-align: center
+    /* margin-left: -115px */
+    display: none
+    -webkit-transition: 2ms
+    transition: 2ms
+    height: 46px
+    padding: 0 20px
+    text-align: center
+    line-height: 46px
+    font-size: 26px
+    color: #fff
+    background: rgba(0, 0, 0, 0.5)
+    border-radius: 8px
+    z-index: 10000
+    &.show
+        display: block
